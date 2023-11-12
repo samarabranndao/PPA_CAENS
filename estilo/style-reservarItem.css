@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("imagem/fundo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+  }
+  #logo {
+    max-width: 16vh; /* Largura máxima da imagem da logo */
+    height: auto; /* Altura automática para manter a proporção */
+    margin-left: auto; /* Margem à esquerda automática para alinhar à direita */
+    margin-right: 4vw; /* Margem à direita para afastar um pouco do canto */
+  }
+  
+  #titulo {
+    position: absolute;
+    left: 2vw; /* Distância da borda esquerda */
+    width: 60%; /* Largura da caixa */
+    height: 10%; /* Altura da caixa (ajustada para 10%) */
+    background-color: #1A213E; /* Cor de fundo da caixa */
+    border: 0.7vh solid #2E3552; /* Borda da caixa */
+    border-radius: 15vh; /* Bordas arredondadas */
+    transform: translate(0, -50%); /* Ajuste para centralizar verticalmente */
+    text-align: center;
+    z-index: 1; /* Colocar a caixa acima do detalhe */
+  }
+  
+  #titulo h1 {
+  font-size: 6vh; /* Tamanho do texto */
+  font-weight: bold;
+  text-align: center;
+
+  color: transparent; /* Definir o texto como transparente */
+  -webkit-text-stroke: 0.2vh #A6FBAE; /* Cor e espessura do contorno */
+  background-clip: text; /* Recortar o texto no contorno */
+  letter-spacing: 1vh; /* Espaçamento entre as letras */
+  margin-top: 2vh;/* Ajuste o valor negativo para mover o texto para cima */
+  }
+  
+  
+  header {
+    background-color: #343A50; /* Cor de fundo do cabeçalho */
+    padding: 10px; /* Espaçamento interno do cabeçalho */
+    display: flex; /* Exibir elementos em linha */
+    align-items: center; /* Alinhar elementos verticalmente */
+    justify-content: space-between; /* Espaçamento entre os elementos do cabeçalho */
+    border-bottom: 0.7vh solid #A6FBAE; /* Borda fina na parte inferior */
+  }
+  h2{
+    margin-top: -2vh;
+    font-size: 3vh;
+    color: #A6FBAE;
+    margin-top: -4vh;
+    margin-bottom: 1vh;
+  }
+  .forms-reservar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centralizar verticalmente */
+    align-items: center; /* Centralizar horizontalmente */
+    width: 500px;
+    height: 65vh;
+    background-color: rgba(0, 1, 16, 0.4);
+    border-radius: 7vh;
+    margin: 0 auto; /* Centralizar horizontalmente */
+    padding: 5vh;
+    box-shadow: 5px 5px 10px rgb(0, 1, 16);
+    margin-top: 10vh; 
+  
+  }
+  input{
+    width: 300px;
+    height: 25px; 
+    background-color: rgb(255, 255, 255, 0.2); 
+    color: white;
+    border-radius: 30px; 
+    font-weight: bold;
+    text-align: left;
+    margin: 10px;
+    padding: 10px 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .retirar-button {
+    background-color: #7BDC73; /* Cor de fundo do botão */
+    padding: 2vh 9vh; /* Espaçamento interno (margem interna) no botão */
+    border-radius: 11.7vh; /* Bordas arredondadas */
+    border: none;
+    text-shadow: 0.5vh 0.5vh 1vh rgba(0, 0, 0, 2); /* Sombra suave no texto do botão */
+    margin-bottom: 3vh; /* Espaçamento inferior entre o botão e o texto */
+    transition: background-color 0.3s ease; /* Efeito suave de transição de cor de fundo */
+    box-shadow: 0 1.5vh 1vh rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 2vh 9vh; /* Espaçamento interno (margem interna) no botão */
+    font-size: 20px;
+  }
+  
+  .retirar-button:hover {
+    background-color: #343A50; /* Nova cor de fundo ao passar o cursor */
+  }
+  .retirar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centralizar horizontalmente */
+    justify-content: center; /* Centralizar verticalmente */
+    margin-top: 10px; /* Espaçamento superior entre a div e o botão */
+  }
+  /* Estilos para o menu */
+  #menu {
+    display: none;
+    flex-direction: column;
+    position: fixed; /* Use 'fixed' para manter o menu na tela ao rolar */
+    top: 10vh;
+    right: 0px; /* Afastado 20px do canto direito */
+    bottom: 0; /* Alinha o menu à parte inferior */
+    width: 40vh; /* Largura aumentada para 250px */
+    background-color: #343A50;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 1.5vh;
+    z-index: 2;
+  }
+  
+  #menu.active {
+   display: flex;
+   justify-content: top;
+   align-items: center; /* Alinhe os links verticalmente ao centro */
+   font-size: 2.5vh;
+  }
+  
+  #listaMenu {
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   gap: 10vh; /* Espaço entre os links */
+   margin-top: 5vh;
+  }
+  
+  #menu-list a {
+   text-decoration: none;
+   color: #7BDC73;
+   font-weight: bold;
+  }
+  
+  #menu-toggle {
+   display: flex;
+   flex-direction: column;
+   cursor: pointer;
+  }
+  
+ 
+  
+  .caixa-de-texto{
+    width: 360px;
+    height: 45px; 
+    background-color: rgb(255, 255, 255, 0.2); 
+    color: white;
+    border-radius: 30px; 
+    font-weight: bold;
+    text-align: left;
+    margin: 10px;
+    padding: 10px 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+  }
+  #detalhe {
+    position: fixed;
+    top: 0;
+    right:0;
+    
+    width: 100vw;
+    height: 110vh;
+    background-image: url("imagem/img-reservarItem.png");
+    background-size: cover;
+    z-index: -1;
+  }
+  nav {
+    margin-right: -2vw;
+    display: flex;
+    gap: 3vh;
+    padding: 2vh 4vh;
+    background-color: #343A50;
+    border-bottom-left-radius: 15vh;
+}
+
+nav a {
+    margin-top: -3vh;
+    margin-left: 3vh;
+    margin-right: -2vh;
+    font-size: 2.7vh;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.3vh 1vh;
+    list-style: none;
+}
+
+nav a:hover {
+    color: #A6FBAE;
+    font-size: 2.9vh;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordenação de Apoio ao Ensino</title>
+  <link rel="stylesheet" href="estilo/style-coord.css">
+</head>
+<body>
+
+<div id="detalhe"></div>
+
+<header>
+  <img id="logo" src="imagem/logo.png" alt="Logo do Sistema">
+  
+
+  <div id="alterarMenu" onclick="alterarMenu()">
+    <div class="barra"></div>
+    <div class="barra"></div>
+    <div class="barra"></div>
+</div>
+<nav id="menu">
+  <ul id="menu-list">
+
+     
+      <li><a href="index-solicitarItem.html">Solicitar Item</a></li>
+      <li><a href="index-retirarItem.html">Retirar Item</a></li>
+      <li><a href="index-devolverItem.html">Devolver Item</a></li>
+      <li><a href="index-item.html">Visualizar Itens</a></li>
+      <li><a href="index-cadastrarItem.html">Cadastrar Item</a></li>
+      <li><a href="index-cadastro.html">Cadastrar Professor</a></li>
+  </ul>
+</nav>
+</header>
+
+<div id="titulo">
+    <h1>COORDENAÇÃO DE APOIO AO ENSINO</h1>
+  </div>
+
+
+
+  <div class="container1">
+    <div class="container1-1">
+      <div class="title1">Solicitações de Itens</div>
+      <div class="solicitacoes_de_itens">
+
+      </div>
+    </div>
+    <div class="container1-2">
+      <div class="title2">Estoque Atual</div>
+    
+      
+      <div class="caixa1">
+        
+      </div>
+
+      <div class="caixa2">
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="container2">
+    <div class="container2-1">
+      <div class="title3">Reservas Recentes</div>
+     
+
+        
+      </div>
+  
+    </div>
+  </div>
+  <script>
+    function alterarMenu() {
+        const menu = document.getElementById("menu");
+        menu.classList.toggle("active");
+    }
+
+    function carregarSolicitacoes() {
+      const solicitacoes = document.querySelector(".solicitacoes_de_itens");
+      const url = "/solicitacoes.php";
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          const table = document.createElement("table");
+          data.forEach(solicitacao => {
+            const tr = document.createElement("tr");
+            ["nome", "quantidade", "tipo", "justificativa"].forEach(prop => {
+              const td = document.createElement("td");
+              td.textContent = solicitacao[prop];
+              tr.appendChild(td);
+            });
+            table.appendChild(tr);
+          });
+          solicitacoes.appendChild(table);
+        });
+    }
+    carregarSolicitacoes();
+  </script>
+</body>

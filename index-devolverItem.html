@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devolução de Item</title>
+    <link rel="stylesheet" href="estilo/style-devolverItem.css">
+</head>
+<body>
+    
+    <div id="detalhe"></div>
+    <div id="detalhe2"></div>
+
+    <header>
+        <img id="logo" src="imagem/logo.png" alt="Logo SGI">
+        
+        <div id="menu-toggle" onclick="AlterarMenu()">
+            <div class="barra"></div>
+            <div class="barra"></div>
+            <div class="barra"></div>
+        </div>
+        <nav id="menu">
+            <ul id="menu-list">
+                <li><a href="index-solicitarItem.html">Solicitar Item</a></li>
+                <li><a href="index-retirarItem.html">Retirar Item</a></li>
+                <li><a href="index-item.html">Visualizar Itens</a></li>
+                <li><a href="index-cadastrarItem.html">Cadastrar Item</a></li>
+                <li><a href="index-cadastro.html">Cadastrar Professor</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="titulo">
+        <h1>DEVOLUÇÃO DE ITEM</h1>
+    </div>
+
+    <div class="tela-devolucao">
+        <h2 class="title">COLOQUE AS INFORMAÇÕES PARA REALIZAR DEVOLUÇÃO</h2>
+        <form method="POST" action="">
+            <input type="text" placeholder="Selecione">
+            <br>
+            <br>
+            <input type="text" name="ciap" placeholder="Reg. CIAP">
+            <br>
+            <br>
+            <input type="date" placeholder="Data">
+            <br>
+            <br>
+        </form>
+    </div>
+
+   
+    <div class="devolver-container">
+        
+        <button class="devolver-button">Devolver</button>
+    </div>
+
+   
+    <script>
+        function AlterarMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

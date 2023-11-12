@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de item</title>
+  <link rel="stylesheet" href="estilo/style-solicitarItem.css">
+</head>
+<body>
+
+<div id="detalhe"></div>
+
+<header>
+  <img id="logo" src="imagem/logo.png" alt="Logo do Sistema">
+
+  <div id="alterarMenu" onclick="alterarMenu()">
+    <div class="barra"></div>
+    <div class="barra"></div>
+    <div class="barra"></div>
+</div>
+<nav id="menu">
+    <ul id="menu-list">
+      <li><a href="index-retirarItem.html">Retirar Item</a></li>
+      <li><a href="index-devolverItem.html">Devolver Item</a></li>
+      <li><a href="index-item.html">Visualizar Itens</a></li>
+      <li><a href="index-cadastrarItem.html">Cadastrar Item</a></li>
+      <li><a href="index-cadastro.html">Cadastrar Professor</a></li>
+    </ul>
+</nav>
+
+</header>
+
+<div id="titulo">
+  <h1>SOLICITAÇÃO DE ITEM</h1>
+</div>
+
+<form action="processar_solicitar_item.php" method="POST">
+  <div class="container">
+
+    <div class="container1">
+
+      <h2 class="text">INFORMAÇÕES DO ITEM</h2>
+      
+        <input type="text" placeholder="Nome do Item" name="nome" required> 
+
+        <select name="tipo" required>
+          <option selected disabled>Selecione o tipo</option>
+          <option value="emprest">Empréstimo</option>
+          <option value="outro">Consumo</option>
+      </select>
+
+        <input type="number" placeholder="Quantidade" name="quantidade" min="1" step="1" required>
+        <button type="submit" id="botao">Solicitar</button>
+    
+    </div>
+
+    <div class="container2">
+      <h2 class="text">JUSTIFICATIVA E OBSERVAÇÕES</h2>
+      <input type="text" required class="content" name="justificativa" placeholder="Insira o motivo da solicitação">
+    </div>
+  </div>
+</form>
+
+<script>
+  function alterarMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("active");
+  }
+</script>
+
+</body>
+</html>
