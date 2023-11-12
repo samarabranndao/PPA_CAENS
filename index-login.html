@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="estilo/style-login.css">
+</head>
+<body>
+    <div id="detalhe1"></div>
+    <div id="detalhe2"></div>
+    <div id="iconeUser"></div>
+    <header>
+        <div id="sgi">
+            <img id="logo" src="imagem/logo.png" alt="Logo SGI - Sistema de Gerenciamento de Itens">
+        </div>
+        <div class="nav-box">
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="index-item.html">Item</a>
+            </nav>
+        </div>
+    </header>
+    <main class="tela-login">
+        <h1 class="title">Login de Usuário</h1>
+        <p class="subtitle">Coloque suas informações de acesso ao sistema</p>
+        <form method="post" action="processar_login.php">
+            <input type="text" name="nome" placeholder="Usuário" required>
+            <br><br>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <br><br>
+            
+            <br><br>
+            <div class="centered-button">
+                <button id="botao" type="submit">Entrar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
